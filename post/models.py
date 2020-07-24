@@ -13,7 +13,7 @@ from django.utils.text import slugify
 class Post(models.Model):
     posttitle   = models.CharField(max_length=150 , verbose_name=_("Title"), blank=True , null=True)
     mainimg     = models.ImageField(upload_to='pstimg/', blank=True , null=True , verbose_name=_("Header Image"))
-    pstcat     = models.ForeignKey('Service' , on_delete=models.CASCADE , blank=True , null=True , verbose_name=_("Service"))
+    #pstcat     = models.ForeignKey('Service' , on_delete=models.CASCADE , blank=True , null=True , verbose_name=_("Service"))
   #  postserv    = models.ForeignKey('Service' , limit_choices_to={'postserv__isnull' : True} , on_delete=models.CASCADE , blank=True , null=True , verbose_name=_('Main Service'))
     postimg     = models.ImageField(upload_to='pstimg/', blank=True , null=True , verbose_name=_("Post Image"))
     content     = models.TextField( verbose_name=_("Post Content") , null=True , blank=False)

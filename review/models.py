@@ -6,10 +6,10 @@ from django.utils import timezone
 class Review(models.Model):
     
     revname      = models.CharField(max_length=150 , verbose_name=_("Client Name"), blank=True , null=True)
-    revimg       = models.ImageField(upload_to='pstimg/', blank=True , null=True , verbose_name=_("Client Image"))
+    revimg       = models.ImageField(upload_to='revimg/', blank=True , null=True , verbose_name=_("Client Image"))
     revcontent   = models.TextField( verbose_name=_("Review Content") , null=True , blank=False)
     revlink      = models.URLField(blank=True , null=True , max_length=200 , verbose_name=_("Link"))
-    revactive    = models.BooleanField(default=True)
+    active       = models.BooleanField(default=True)
 
 
     def __str__(self):

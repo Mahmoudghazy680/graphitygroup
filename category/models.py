@@ -8,6 +8,7 @@ class Service(models.Model):
     mainserv     = models.ForeignKey('self' , limit_choices_to={'mainserv__isnull' : True} , on_delete=models.CASCADE , blank=True , null=True , verbose_name=_('Main Service'))
     servimg      = models.ImageField(upload_to='servimg/', blank=True , null=True , verbose_name=_('Service Image'))
     servdesc     = models.TextField(blank=True , null=True, verbose_name=_('Service Decsription'))
+    servactive   = models.BooleanField(default=True , verbose_name=_('Active'))
 
 
 
